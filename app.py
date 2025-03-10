@@ -7,6 +7,10 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
+
+
+
+
 # Global image size
 IMG_SIZE = 224
 
@@ -160,6 +164,13 @@ async def predict_image(file: UploadFile = File(...)):
     
     return results
 
+@app.get("/")
+async def root():
+    return {"message": "Models API is running"}
+
+@app.get("/saher-test")
+async def saher_test():
+    return "this is saher test sign language API running test"
 # if __name__ == "__main__":
 #     # Run the FastAPI app with uvicorn
 #     uvicorn.run(app, host="0.0.0.0", port=8000)
