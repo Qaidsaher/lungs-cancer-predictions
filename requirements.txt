@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+tensorflow
+opencv-python
+numpy
+base64
