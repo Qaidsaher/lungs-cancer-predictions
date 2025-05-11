@@ -121,11 +121,11 @@ def load_models():
         print("VGG16 model loaded successfully.")
     except Exception as e:
         print(f"Error loading VGG16 model: {e}")
-    # try:
-    #     model_vgg19 = tf.keras.models.load_model("lungs_models/best_vgg19.keras")
-    #     print("VGG19 model loaded successfully.")
-    # except Exception as e:
-    #     print(f"Error loading VGG19 model: {e}")
+    try:
+        model_vgg19 = tf.keras.models.load_model("lungs_models/best_vgg19.keras")
+        print("VGG19 model loaded successfully.")
+    except Exception as e:
+        print(f"Error loading VGG19 model: {e}")
     try:
         model_mobilenet = tf.keras.models.load_model("lungs_models/best_mobilenet.keras")
         print("MobileNetV2 model loaded successfully.")
